@@ -48,7 +48,7 @@ def get_profile(browser):
 
 def get_companies(browser):
     id = redis.sunion(['mt'])
-    red = StrictRedis(host='47.94.246.65', port=6379, db=12, password='WonderALY1')
+    red = StrictRedis(host='your host', port=6379, db=12, password='WonderALY1')
     for s in id:
         tt = random.randint(10, 18)
         time.sleep(tt)
