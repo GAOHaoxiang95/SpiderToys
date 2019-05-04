@@ -42,7 +42,7 @@ def get_profile(browser):
         for i in g:
             links.append(i)
             print(redis.sadd('mt', i))
-        time.sleep(10)
+        time.sleep(8)
     return links
 
 
@@ -50,7 +50,7 @@ def get_companies(browser):
     id = redis.sunion(['mt'])
     red = StrictRedis(host='47.94.246.65', port=6379, db=12, password='WonderALY1')
     for s in id:
-        tt = random.randint(15, 19)
+        tt = random.randint(10, 18)
         time.sleep(tt)
         try:
             browser.get("https://maimai.cn/contact/detail/" + s.decode('utf-8'))
